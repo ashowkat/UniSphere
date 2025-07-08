@@ -1,0 +1,82 @@
+
+body {
+    background-color: rgb(255, 218, 242);  
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 20px 0;  
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(255, 218, 242);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ede0ff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3d083b;
+    font-weight: bold;
+}
+
+#Home{
+    text-align: center;
+}
+#todo.html{
+    text-align: center;
+}
+#calendar.html{
+    text-align: center;
+}
+#schedule.html{
+    text-align: center;
+}
+
+#itemInput, #itemList, button {
+    margin-top: 10px;
+}
+
+
+footer p {
+    margin: 0;
+    color: #666;
+}
+
+body.todo{
+    background-color: rgb(255, 218, 242);  
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+body.calendar{
+    background-color: rgb(255, 218, 242);  
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+body.schedule{
+    background-color: rgb(255, 218, 242);  
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
