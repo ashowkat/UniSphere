@@ -12,6 +12,7 @@ function addTask(input){
         const taskItem = document.createElement("li");
         taskItem.textContent = input;
     }
+    
 
     list.appendChild(taskItem);
 }
