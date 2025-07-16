@@ -1,17 +1,32 @@
 <header>
-    <div class = "buttonToDoAlign">
+    <div class="buttonToDoAlign">
         <button style="background-color:rgb(212, 169, 255); color: #280039;" onclick="history.back()">⬅ Back</button>
     </div>
+
+    <div class="header-content">
+        <img src="whiteStars.png" alt="Left star" class="star">
+        <h1>UniSphere</h1>
+        <img src="whiteStars.png" alt="Right star" class="star">
+    </div>
+    <p style="color:rgb(236, 218, 255); font-size: 1.25em">To Do Page</p>
+    <p style="color:rgb(236, 218, 255);">Use this page to list work, activities, or more that you need to complete.</p>
+    <link rel="stylesheet" href="b.css">
+
+    <body class="todo">
+</header>
+<!--
         <h1 style="color: rgb(212, 169, 255);">UniSphere</h1>
         <p style="color:rgb(236, 218, 255); font-size: 1.25em">To Do Page</p>
         <p style="color:rgb(236, 218, 255);">Use this page to list work, activities, or more that you need to complete.</p>
         <link rel="stylesheet" href="b.css">
         <body class="todo">
-    </header>
+  </header>-->
 
 <div class="todo-list">
-    <input style="background-color:rgb(212, 169, 255); color: #280039;" type = "text" id = "task"  placeholder="Enter new task"/>
+    <input style="background-color:rgb(212, 169, 255); color: #280039;" type="text" id="task"
+        placeholder="Enter new task" />
     <button style="background-color:#280039; color: rgb(212, 169, 255);" id="addTaskBtn">Add Task</button>
-    <ul id = list></ul>
+    <ul id=list></ul>
 </div>
-<script src = "todo.js"></script>
+</body>
+<script src="todo.js"></script>

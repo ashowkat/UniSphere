@@ -4,12 +4,12 @@ const list = document.getElementById("list");
 //let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 button.addEventListener("click", () => addTask(input.value));
-input.addEventListener("keydown", function(event){
+input.addEventListener("keydown", function (event) {
     if (event.key === "Enter")
         addTask(input.value);
 });
 
-function addTask(string){
+function addTask(string) {
     //tasks.push(string);
     //localStorage.setItem("tasks", JSON.stringify(tasks));
     const taskItem = document.createElement("li");
@@ -17,7 +17,7 @@ function addTask(string){
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = function(){
+    deleteBtn.onclick = function () {
         list.removeChild(taskItem);
         //tasks.splice(index, 1);
         //localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -45,8 +45,6 @@ function loadTasks(){
         taskItem.appendChild(deleteBtn);
     });
     }
-
-
 
 window.onload = () => {
     loadTasks();

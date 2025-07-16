@@ -1,43 +1,59 @@
 <!-- @author Aleezah Showkat-->
 <!-- @author Amy Siby-->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UniSphere</title>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Aladin">
-    <link rel="stylesheet" href="b.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin" />
+    <link rel="stylesheet" href="b.css" />
 </head>
-<body style="font-family: 'Times New Roman', serif;">
 
-    <header>
-        <div class="header-content">
-          <img src="whiteStars.png" alt="Left star" class="star">
-          <h1>UniSphere</h1>
-          <img src="whiteStars.png" alt="Right star" class="star">
+<body
+    style="font-family: 'Times New Roman', serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column;">
+
+    <div style="flex: 1;">
+        <header>
+            <div class="header-content">
+                <img src="whiteStars.png" alt="Left star" class="star" />
+                <h1 style="text-align: center; color: rgb(212, 169, 255);">UniSphere</h1>
+                <img src="whiteStars.png" alt="Right star" class="star" />
+            </div>
+            <p style="color:rgb(236, 218, 255); font-size: 1.25em">Welcome to Unisphere!</p>
+            <p style="color:rgb(236, 218, 255);">This website is designed to help you organize and navigate through your
+                work.</p>
+        </header>
+
+        <main>
+            <section>
+                <nav style="text-align: center; margin-top: 20px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="display: inline; margin: 0 15px;"><a href="#Home">Home</a></li>
+                        <li style="display: inline; margin: 0 15px;"><a href="todo.html">To-Do</a></li>
+                        <li style="display: inline; margin: 0 15px;"><a href="calendar.html">Calendar</a></li>
+                        <li style="display: inline; margin: 0 15px;"><a href="notes.html">Notes</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+    </div>
+
+    <footer style="background-color: #280039; padding: 15px 0; text-align: center;">
+        <p style="color: rgb(236, 218, 255); margin: 0;">Website designed by Aleezah and Amy!</p>
+        <div style="margin-top: 10px;">
+          <a href="https://github.com/ashowkat" target="_blank" style="margin: 0 10px;">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="25" height="25" style="filter: invert(100%);"/>
+          </a>
+          <a href="https://github.com/asiby197" target="_blank" style="margin: 0 10px;">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="25" height="25" style="filter: invert(100%);"/>
+          </a>
+    <!--
+          <a href="https://www.linkedin.com/in/aleezahshowkat/" target="_blank" style="margin: 0 10px;">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="25" height="25" style="filter: invert(94%) sepia(10%) saturate(370%) hue-rotate(233deg) brightness(102%) contrast(95%);"/>
+          </a>
+    -->
         </div>
-        <p class="subtitle">Welcome to Unisphere.</p>
-        <p class="subtitle">This website is designed to help you organize and navigate through your work.</p>
-      </header>
-
-
+      </footer>
       
-    <main>
-        <section>
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>  
-                <li><a href="todo.html">To-Do</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="notes.html">Notes</a></li>
-            </ul>
-        </nav>
-    </section>
-
-    
-    </main>
-
-    <footer>
-    </footer>
 </body>
