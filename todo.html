@@ -1,5 +1,7 @@
 <header>
-        <button onclick="history.back()">⬅ Back</button>
+    <div class = "buttonToDoAlign">
+        <button style="background-color:rgb(212, 169, 255); color: #280039;" onclick="history.back()">⬅ Back</button>
+    </div>
         <h1 style="color: rgb(212, 169, 255);">UniSphere</h1>
         <p style="color:rgb(236, 218, 255); font-size: 1.25em">To Do Page</p>
         <p style="color:rgb(236, 218, 255);">Use this page to list work, activities, or more that you need to complete.</p>
@@ -8,8 +10,8 @@
     </header>
 
 <div class="todo-list">
-    <input type = "text" id = "task" placeholder="Enter new task"/>
-    <button id="addTaskBtn">Add Task</button>
+    <input style="background-color:rgb(212, 169, 255); color: #280039;" type = "text" id = "task"  placeholder="Enter new task"/>
+    <button style="background-color:#280039; color: rgb(212, 169, 255);" id="addTaskBtn">Add Task</button>
     <ul id = list></ul>
 </div>
 <script src = "todo.js"></script>
