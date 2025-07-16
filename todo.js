@@ -1,3 +1,6 @@
+//@author Amy Siby 
+//@author Aleezah Showkat
+
 const button = document.getElementById("addTaskBtn");
 const input = document.getElementById("task");
 const list = document.getElementById("list");
