@@ -4,7 +4,6 @@
 const button = document.getElementById("addTaskBtn");
 const input = document.getElementById("task");
 const list = document.getElementById("list");
-//let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 button.addEventListener("click", () => addTask(input.value));
 input.addEventListener("keydown", function (event) {
@@ -13,43 +12,51 @@ input.addEventListener("keydown", function (event) {
 });
 
 function addTask(string) {
-    //tasks.push(string);
-    //localStorage.setItem("tasks", JSON.stringify(tasks));
-    const taskItem = document.createElement("li");
-    taskItem.textContent = string + "      ";
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = function () {
-        list.removeChild(taskItem);
-        //tasks.splice(index, 1);
-        //localStorage.setItem("tasks", JSON.stringify(tasks));
-        //loadTasks();
-    };
-    list.appendChild(taskItem);
-    taskItem.appendChild(deleteBtn);
-    input.value = "";
-}
-/*
-function loadTasks(){
-    list.innerHTML = "";
-    tasks.forEach((taskText, index) => {
+    if (string.trim() != ""){
         const taskItem = document.createElement("li");
-        taskItem.textContent = taskText + "      ";
+        taskItem.textContent = string.trim() + "      ";
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
-        deleteBtn.onclick = function(){
-            tasks.splice(index, 1);
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-            loadTasks();
+        deleteBtn.style = "background-color:rgb(212, 169, 255); color: #280039;";
+        deleteBtn.onclick = function () {
+            list.removeChild(taskItem);
+            saveTasks();
         };
         list.appendChild(taskItem);
         taskItem.appendChild(deleteBtn);
-    });
+        saveTasks();
+        input.value = "";
     }
+}
 
-window.onload = () => {
-    loadTasks();
-};
-*/
+function saveTasks(){
+    let tasks = [];
+    list.querySelectorAll('li').forEach(function(item){
+        tasks.push(item.textContent.replace('Delete','').trim());
+    });
+
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+}
+
+function loadTasks(){
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.forEach(function(item){
+        if (item.trim() != ""){
+            const taskItem = document.createElement("li");
+            taskItem.textContent = item.trim() + "      ";
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.style = "background-color:rgb(212, 169, 255); color: #280039;";
+            deleteBtn.onclick = function () {
+                list.removeChild(taskItem);
+                saveTasks();
+            };
+            list.appendChild(taskItem);
+            taskItem.appendChild(deleteBtn);
+    }
+    });
+}
+
+loadTasks();

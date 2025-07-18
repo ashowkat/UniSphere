@@ -6,16 +6,34 @@
     </div>
 
     <div class="header-content">
-        <h1 style="color:rgb(212, 169, 255);">UniSphere</h1>
+        <img src="whiteStars.png" alt="Left star" class="star">
+        <h1>UniSphere</h1>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin" />
+        <img src="whiteStars.png" alt="Right star" class="star">
     </div>
-
     <p style="color:rgb(236, 218, 255); font-size: 1.25em">Notes Page</p>
     <p style="color:rgb(236, 218, 255);">Use the pages to add any notes needed.</p>
     <link rel="stylesheet" href="b.css">
 </header>
 
 <body class="notes">
+
+    <div class="controls">
+        <button id="addNoteBtn">Add Note</button>
+        <label for="noteColor">Color:</label>
+        <select id="noteColor">
+          <option value="#f9f390">Yellow</option>
+          <option value="#ffc0cb">Pink</option>
+          <option value="#c1f0c1">Green</option>
+          <option value="#add8e6">Blue</option>
+          <option value="#e6ccff">Purple</option>
+        </select>
+      </div>
+    
+      <div class="note-container" id="noteContainer"></div>
+    
+      <script src="notes.js"></script>
+
 </body>
 
 <div class="notes" id="notesGrid">
