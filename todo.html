@@ -1,6 +1,5 @@
 <!-- @author Aleezah Showkat -->
 <!-- @author Amy Siby -->
-
 <header>
     <div class="buttonToDoAlign">
         <button style="background-color:rgb(212, 169, 255); color: #280039;" onclick="history.back()">⬅ Back</button>
@@ -15,23 +14,18 @@
     <p style="color:rgb(236, 218, 255); font-size: 1.25em">To Do Page</p>
     <p style="color:rgb(236, 218, 255);">Use this page to list work, activities, or more that you need to complete.</p>
     <link rel="stylesheet" href="b.css">
-
-    <body class="todo">
 </header>
-<!--
-        <h1 style="color: rgb(212, 169, 255);">UniSphere</h1>
-        <p style="color:rgb(236, 218, 255); font-size: 1.25em">To Do Page</p>
-        <p style="color:rgb(236, 218, 255);">Use this page to list work, activities, or more that you need to complete.</p>
-        <link rel="stylesheet" href="b.css">
-        <body class="todo">
-  </header> 
--->
 
-<div class="todo-list">
-    <input style="background-color:rgb(212, 169, 255); color: #280039;" type="text" id="task"
-        placeholder="Enter new task" />
-    <button style="background-color:#280039; color: rgb(212, 169, 255);" id="addTaskBtn">Add Task</button>
-    <ul id=list></ul>
-</div>
+<body class="todo">
+    <main class="todo-list">
+        <input style="background-color:rgb(212, 169, 255); color: #280039;" type="text" id="task"
+            placeholder="Enter new task" />
+        <button style="background-color:#280039; color: rgb(212, 169, 255);" id="addTaskBtn">Add Task</button>
+        <ul id=list></ul>
+    </main>
+
+    <footer style="background-color: #280039; padding: 15px 0; text-align: center;">
+        <button style="background-color:rgb(212, 169, 255); color: #280039;" id="undoBtn">Undo ↩</button>
+    </footer>
+    <script src="todo.js"></script>
 </body>
-<script src="todo.js"></script>

@@ -4,6 +4,7 @@
 const button = document.getElementById("addTaskBtn");
 const input = document.getElementById("task");
 const list = document.getElementById("list");
+let taskStack = [];
 
 button.addEventListener("click", () => addTask(input.value));
 input.addEventListener("keydown", function (event) {
@@ -21,6 +22,7 @@ function addTask(string) {
         deleteBtn.style = "background-color:rgb(212, 169, 255); color: #280039;";
         deleteBtn.onclick = function () {
             list.removeChild(taskItem);
+            taskStack.push(taskItem);
             saveTasks();
         };
         list.appendChild(taskItem);
@@ -37,6 +39,7 @@ function saveTasks(){
     });
 
     localStorage.setItem("tasks",JSON.stringify(tasks));
+    localStorage.setItem("taskStack", JSON.stringify(taskStack));
 }
 
 function loadTasks(){
@@ -60,3 +63,13 @@ function loadTasks(){
 }
 
 loadTasks();
+
+//Undo Button
+const undoBtn = document.getElementById("undoBtn");
+
+undoBtn.addEventListener('click', () => undo())
+
+function undo(){
+    if (taskStack.length > 0)
+        addTask(taskStack.pop().textContent.replace("Delete",""));
+}

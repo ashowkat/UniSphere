@@ -1,5 +1,6 @@
 /* @author Aleezah Showkat 
    @author Amy Siby */
+   
 body {
     /* part under unisphere header and bottom part */
     background-color: rgb(0, 0, 0);
@@ -18,10 +19,10 @@ section {
     padding: 20px;
     border-radius: 8px;
     background-color: rgb(227, 207, 255);
-    
+
 }
 
-header{
+header {
     text-align: center;
     padding: 20px;
     background-color: #000000;
@@ -29,13 +30,6 @@ header{
     margin-bottom: 20px;
 }
 
-/*
-.subtitle {
-    color: rgb(236, 218, 255);
-    margin: 10px 0;
-    font-size: 1em;
-}
-*/
 
 .header-content {
     display: flex;
@@ -47,9 +41,9 @@ header{
 
 .header-content h1 {
     font-family: 'Aladin', serif;
-    color:rgb(212, 169, 255);
+    color: rgb(212, 169, 255);
     margin: 0;
-    text-shadow: 3px 3px 3px  #7e22a2;
+    text-shadow: 3px 3px 3px #7e22a2;
     font-size: 3em;
 }
 
@@ -118,37 +112,42 @@ footer p {
     margin: 0;
 }
 
-
 body.todo {
     background-color: rgb(236, 218, 255);
-    /*rgb(101, 200, 164);*/
     font-family: 'Times New Roman', serif;
     margin: 15px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body.calendar {
     background-color: rgb(236, 218, 255);
     /* rgb(169, 188, 255); */
     font-family: 'Times New Roman', serif;
-    margin: 0;
+    margin: 15px;
     padding: 0;
 }
 
 body.notes {
-    background-color:  rgb(236, 218, 255);
-   /* rgb(242, 176, 220);*/
+    background-color: rgb(236, 218, 255);
+    /* rgb(242, 176, 220);*/
     font-family: 'Times New Roman', serif;
-    margin: 0;
+    margin: 15px;
     padding: 0;
 }
 
+main.todo-list {
+    flex: 1;
+    padding-bottom: 20px;
+}
 
 .controls {
     margin-bottom: 20px;
-  }
-  
-  #addNoteBtn {
+}
+
+#addNoteBtn {
     background-color: #280039;
     color: rgb(212, 169, 255);
     border: none;
@@ -156,26 +155,26 @@ body.notes {
     font-size: 1em;
     border-radius: 8px;
     cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .note-container {
+    margin-right: 15px;
+}
+
+.note-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-  }
+}
 
-  .note {
+.note {
     width: 200px;
     height: 200px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
     position: relative;
     overflow-wrap: break-word;
-  }
-  
-  .note textarea {
+}
+
+.note textarea {
     width: 100%;
     height: 80%;
     border: none;
@@ -183,18 +182,18 @@ body.notes {
     resize: none;
     font-size: 1em;
     outline: none;
-  }
-  
-  .delete-btn {
+}
+
+.delete-btn {
     position: absolute;
     top: 5px;
     right: 8px;
-    background: #ff6262;
-    color: white;
+    background: #fc3030;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 50%;
     width: 24px;
     height: 24px;
     cursor: pointer;
     font-weight: bold;
-  }
+}
