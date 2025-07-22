@@ -17,6 +17,9 @@ function addTask(string) {
         const taskItem = document.createElement("li");
         taskItem.textContent = string.trim() + "      ";
 
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
         deleteBtn.style = "background-color:rgb(212, 169, 255); color: #280039;";
@@ -25,7 +28,9 @@ function addTask(string) {
             taskStack.push(taskItem);
             saveTasks();
         };
+
         list.appendChild(taskItem);
+        taskItem.appendChild(checkbox);
         taskItem.appendChild(deleteBtn);
         saveTasks();
         input.value = "";
@@ -49,6 +54,9 @@ function loadTasks(){
             const taskItem = document.createElement("li");
             taskItem.textContent = item.trim() + "      ";
 
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+
             const deleteBtn = document.createElement("button");
             deleteBtn.textContent = "Delete";
             deleteBtn.style = "background-color:rgb(212, 169, 255); color: #280039;";
@@ -56,7 +64,9 @@ function loadTasks(){
                 list.removeChild(taskItem);
                 saveTasks();
             };
+
             list.appendChild(taskItem);
+            taskItem.appendChild(checkbox);
             taskItem.appendChild(deleteBtn);
     }
     });

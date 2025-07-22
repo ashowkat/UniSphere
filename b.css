@@ -42,7 +42,6 @@ header {
 .header-content h1 {
     font-family: 'Aladin', serif;
     color: rgb(212, 169, 255);
-    margin: 0;
     text-shadow: 3px 3px 3px #7e22a2;
     font-size: 3em;
 }
@@ -197,3 +196,61 @@ main.todo-list {
     cursor: pointer;
     font-weight: bold;
 }
+
+.contact-box {
+    background-color: #280039;
+    border: 2px solid #d4a9ff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(212, 169, 255, 0.3);
+    text-align: center;
+  }
+  
+  .contact-box h2 {
+    color: rgb(212, 169, 255);
+    font-family: 'Aladin', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-box p {
+    color: rgb(236, 218, 255);
+    margin-bottom: 20px;
+  }
+  
+  .contact-box input,
+  .contact-box textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(236, 218, 255);
+    color: #280039;
+    font-family: 'Times New Roman', serif;
+    font-size: 1em;
+  }
+  
+  .contact-box textarea {
+    resize: vertical;
+  }
+  
+  .contact-box button {
+    background-color: rgb(212, 169, 255);
+    color: #280039;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-box button:hover {
+    background-color: rgb(236, 218, 255);
+  }
+  

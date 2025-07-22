@@ -3,7 +3,7 @@
 
 //javascript file for notes page
 const noteContainer = document.getElementById("noteContainer");
-const addNoteBtn = document.getElementById("addNoteBtn");
+const addNote = document.getElementById("addNote");
 const colorSelector = document.getElementById("noteColor");
 
 // Load saved notes
@@ -32,22 +32,22 @@ function createNote(text = "", color = "#f9f390") {
     textarea.value = text;
     textarea.addEventListener("input", saveNotes);
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.innerText = "×";
-    deleteBtn.className = "delete-btn";
-    deleteBtn.onclick = () => {
+    const deleteNote = document.createElement("button");
+    deleteNote.innerText = "×";
+    deleteNote.className = "delete-btn";
+    deleteNote.onclick = () => {
         note.remove();
         saveNotes();
     };
 
-    note.appendChild(deleteBtn);
+    note.appendChild(deleteNote);
     note.appendChild(textarea);
     noteContainer.appendChild(note);
     saveNotes();
 }
 
 // Add note on button click
-addNoteBtn.addEventListener("click", () => {
+addNote.addEventListener("click", () => {
     const selectedColor = colorSelector.value;
     createNote("", selectedColor);
 });
