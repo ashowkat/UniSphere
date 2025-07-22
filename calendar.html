@@ -1,6 +1,6 @@
 <!-- @author Aleezah Showkat -->
 <!-- @author Amy Siby -->
-<header>
+<!--<header>
     <div class="buttonToDoAlign">
         <button style="background-color:rgb(212, 169, 255); color: #280039;" onclick="history.back()">⬅ Back</button>
     </div>
@@ -21,6 +21,257 @@
 
 
 <div class="calendar" id="calendarGrid">
-
 </div>
-<script src="calendar.js"></script>
+
+<script src="calendar.js"></script
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <header>
+        <div class="buttonToDoAlign">
+            <button style="background-color:rgb(212, 169, 255); color: #280039;" onclick="history.back()">⬅ Back</button>
+        </div>
+    
+        <div class="header-content">
+            <img src="whiteStars.png" alt="Left star" class="star">
+            <h1>UniSphere</h1>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin" />
+            <img src="whiteStars.png" alt="Right star" class="star">
+        </div>
+        <p style="color:rgb(236, 218, 255); font-size: 1.25em">Calendar Page</p>
+        <p style="color:rgb(236, 218, 255);">Use this page as a visual aid to help you organize your work.</p>
+        <link rel="stylesheet" href="b.css">
+    </header>
+<head>
+ 
+  <div class="calendar-background">
+  <style>
+ 
+ section {
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgb(227, 207, 255);
+      /*max-width: 1000px;*/
+      box-shadow: 0 0 15px rgba(130, 80, 180, 0.3);
+    }
+
+    .calendar-container {
+      /* keep container full width inside section */
+      width: 100%;
+      font-family: 'Times New Roman', serif;
+      color: #280039;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .calendar-header h2 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #280039;
+    }
+
+    .calendar-header button {
+      background-color: #7e22a2;
+      color: #f4e4ff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .day-name {
+      font-weight: 600;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #a68eff;
+      color: #280039;
+    }
+
+    .date-cell {
+      background: #d6bfff;
+      border-radius: 8px;
+      min-height: 80px;
+      padding: 8px;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      color: #280039;
+    }
+
+    .date-cell.inactive {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .date-number {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .events {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      overflow-y: auto;
+      max-height: 50px;
+    }
+
+    .event-tag {
+      background-color: #7e22a2;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      color: #f4e4ff;
+      border: 1px solid #280039;
+      user-select: none;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(28, 31, 38, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      visibility: hidden;
+    }
+
+    .modal.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: rgb(227, 207, 255);
+      padding: 20px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 10px rgb(130 80 180 / 0.5);
+      color: #280039;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+      color: #7e22a2;
+    }
+
+    .modal-content label {
+      display: block;
+      margin: 10px 0 4px;
+    }
+
+    .modal-content input[type="text"],
+    .modal-content input[type="color"] {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-family: 'Times New Roman', serif;
+      font-size: 1rem;
+    }
+
+    .modal-buttons {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    button.cancel-btn {
+      background-color: #a68eff;
+      color: #280039;
+    }
+
+    button.delete-btn {
+      background-color: #d9534f;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="text-align: center; margin-bottom: 10px;">
+    <h1>UniSphere</h1>
+  </header>
+
+  <section>
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prevMonthBtn" aria-label="Previous Month">&lt;</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonthBtn" aria-label="Next Month">&gt;</button>
+      </div>
+      <div class="calendar-grid" id="calendarGrid">
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+      </div>
+    </div>
+
+
+  <!-- Modal for Add/Edit Event -->
+  <div class="modal" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add Event</h3>
+      <form id="eventForm">
+        <label for="eventTitle">Event Title</label>
+        <input type="text" id="eventTitle" name="eventTitle" required maxlength="30" placeholder="Event name" />
+
+        <label for="eventColor">Event Color</label>
+        <input type="color" id="eventColor" name="eventColor" value="#7e22a2" />
+
+        <div class="modal-buttons">
+          <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+          <button type="submit" id="saveBtn">Save</button>
+          <button type="button" class="delete-btn" id="deleteBtn" style="display:none;">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <body class="calendar">
+  </body>
+
+  <div class="calendar" id="calendarGrid">
+  </div>
+  
+  <script src="calendar.js"></script>
+</body>
+</div>
+
+
+</html>
