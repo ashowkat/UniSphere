@@ -1,352 +1,427 @@
 /* @author Aleezah Showkat 
    @author Amy Siby */
-   body {
-       /* part under unisphere header and bottom part */
-       background-color: rgb(0, 0, 0);
-       font-family: 'Times New Roman', serif;
-       flex-direction: column;
-       margin: 0;
-       padding: 0;
-   }
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', serif;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
 
-   .content {
-       flex: 1;
-   }
+.content {
+    flex: 1;
+}
 
-   section {
-       margin: 20px 0;
-       padding: 20px;
-       border-radius: 8px;
-       background-color: rgb(227, 207, 255);
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(227, 207, 255);
 
-   }
+}
 
-   header {
-       text-align: center;
-       padding: 20px;
-       background-color: #000000;
-       border-radius: 8px;
-       margin-bottom: 20px;
-   }
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 
 
-   .header-content {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 20px;
-       margin-bottom: 15px;
-   }
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
 
-   .header-content h1 {
-       font-family: 'Aladin', serif;
-       color: rgb(212, 169, 255);
-       text-shadow: 3px 3px 3px #7e22a2;
-       font-size: 3em;
-   }
+.header-content h1 {
+    font-family: 'Aladin', serif;
+    color: rgb(212, 169, 255);
+    text-shadow: 3px 3px 3px #7e22a2;
+    font-size: 3em;
+}
 
-   .star {
-       width: 50px;
-       height: auto;
-   }
+.star {
+    width: 50px;
+    height: auto;
+}
 
-   nav ul {
-       display: flex;
-       justify-content: center;
-       list-style: none;
-       padding: 0;
-   }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
 
-   nav ul li {
-       margin: 0 15px;
-   }
+nav ul li {
+    margin: 0 15px;
+}
 
-   nav ul li a {
-       text-decoration: none;
-       color: #280039;
-       font-weight: bold;
-   }
+nav ul li a {
+    text-decoration: none;
+    color: #280039;
+    font-weight: bold;
+}
 
-   #Home {
-       text-align: center;
-   }
+#Home {
+    text-align: center;
+}
 
-   .buttonToDoAlign {
-       position: absolute;
-   }
+.buttonToDoAlign {
+    position: absolute;
+}
 
-   #task::placeholder {
-       color: #280039;
-   }
+#task::placeholder {
+    color: #280039;
+}
 
-   #todo.html {
-       text-align: center;
-   }
+#todo.html {
+    text-align: center;
+}
 
-   #calendar.html {
-       text-align: center;
-   }
+#calendar.html {
+    text-align: center;
+}
 
-   #notes.html {
-       text-align: center;
-   }
+#notes.html {
+    text-align: center;
+}
 
-   #itemInput,
-   #itemList,
-   button {
-       margin-top: 10px;
-   }
+#itemInput,
+#itemList,
+button {
+    margin-top: 10px;
+}
 
-   footer {
-       background-color: #280039;
-       text-align: center;
-       padding: 15px 0;
-       margin-top: auto;
-   }
+footer {
+    background-color: #280039;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
 
-   footer p {
-       color: rgb(236, 218, 255);
-       font-size: 1em;
-       margin: 0;
-   }
+footer p {
+    color: rgb(236, 218, 255);
+    font-size: 1em;
+    margin: 0;
+}
 
-   body.todo {
-       background-color: rgb(236, 218, 255);
-       font-family: 'Times New Roman', serif;
-       margin: 15px;
-       padding: 0;
-       display: flex;
-       flex-direction: column;
-       min-height: 100vh;
-   }
+body.todo {
+    background-color: rgb(236, 218, 255);
+    font-family: 'Times New Roman', serif;
+    margin: 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-   body.calendar {
-       background-color: rgb(236, 218, 255);
-       font-family: 'Times New Roman', serif;
-       margin: 15px;
-       padding: 0;
-   }
-   body.calendar section {
+body.calendar {
+    background-color: rgb(236, 218, 255);
+    font-family: 'Times New Roman', serif;
+    margin: 15px;
+    padding: 0;
+}
+
+body.calendar section {
     background-color: transparent;
     padding: 0;
     margin: 0;
 }
 
-   body.notes {
-       background-color: rgb(236, 218, 255);
-       font-family: 'Times New Roman', serif;
-       margin: 15px;
-       padding: 0;
-   }
-
-   /* to do list */
-   main.todo-list {
-       flex: 1;
-       padding-bottom: 20px;
-   }
-
-
-   /* notes page */
-
-   .controls {
-       margin-bottom: 20px;
-   }
-
-   #addNoteBtn {
-       background-color: #280039;
-       color: rgb(212, 169, 255);
-       border: none;
-       padding: 10px 15px;
-       font-size: 1em;
-       border-radius: 8px;
-       cursor: pointer;
-       margin-right: 15px;
-   }
-
-   .note-container {
-       display: flex;
-       flex-wrap: wrap;
-       gap: 15px;
-   }
-
-   .note {
-       width: 200px;
-       height: 200px;
-       padding: 10px;
-       border-radius: 10px;
-       box-shadow: 3px 3px 8px rgb(0, 0, 0);
-       position: relative;
-       overflow-wrap: break-word;
-   }
-
-   .note textarea {
-       width: 100%;
-       height: 80%;
-       border: none;
-       background: transparent;
-       resize: none;
-       font-size: 1em;
-       outline: none;
-   }
-
-   .delete-btn {
-       position: absolute;
-       top: 5px;
-       right: 8px;
-       background: #fc3030;
-       color: rgb(255, 255, 255);
-       border: none;
-       border-radius: 50%;
-       width: 24px;
-       height: 24px;
-       cursor: pointer;
-       font-weight: bold;
-   }
-
-   /* contact us box */
-   .contact-box {
-       background-color: #280039;
-       border: 2px solid #d4a9ff;
-       border-radius: 20px;
-       padding: 30px;
-       max-width: 600px;
-       margin: 50px auto;
-       box-shadow: 0 4px 12px rgba(212, 169, 255, 0.3);
-       text-align: center;
-   }
-
-   .contact-box h2 {
-       color: rgb(212, 169, 255);
-       font-family: 'Aladin', serif;
-       font-size: 2em;
-       margin-bottom: 10px;
-   }
-
-   .contact-box p {
-       color: rgb(236, 218, 255);
-       margin-bottom: 10px;
-   }
-
-   .contact-box input,
-   .contact-box textarea {
-       width: 90%;
-       padding: 10px;
-       margin: 10px 0;
-       border-radius: 10px;
-       background-color: rgb(236, 218, 255);
-       color: #280039;
-       font-family: 'Times New Roman', serif;
-       font-size: 1em;
-   }
-
-   .contact-box textarea {
-       resize: vertical;
-   }
-
-   .contact-box button {
-       background-color: rgb(212, 169, 255);
-       color: #280039;
-       border: none;
-       padding: 10px 25px;
-       border-radius: 10px;
-       font-weight: bold;
-       font-size: 1em;
-       cursor: pointer;
-       margin-top: 10px;
-   }
-
-   .contact-box input::placeholder,
-   .contact-box textarea::placeholder {
-       color: #280039;
-   }
-
-   .contact-box button:hover {
-       background-color: rgb(236, 218, 255);
-   }
-
-   ul{
-    list-style-type: none;
-   }
-
-   /* calendar */
-   .calendar-background {
-    background-color:#280039;
-    padding: 30px 0;
-  }
-  
-.calendar-container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: rgb(227, 207, 255); /* your section background */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(130, 80, 180, 0.3);
+body.notes {
+    background-color: rgb(236, 218, 255);
     font-family: 'Times New Roman', serif;
-    color: #280039; 
-  }
-  
-  .calendar-header {
+    margin: 15px;
+    padding: 0;
+}
+
+/* to do list */
+main.todo-list {
+    flex: 1;
+    padding-bottom: 20px;
+}
+
+
+/* notes page */
+
+.controls {
+    margin-bottom: 20px;
+}
+
+#addNoteBtn {
+    background-color: #280039;
+    color: rgb(212, 169, 255);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.note {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgb(0, 0, 0);
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.note textarea {
+    width: 100%;
+    height: 80%;
+    border: none;
+    background: transparent;
+    resize: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: #fc3030;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* contact us box */
+.contact-box {
+    background-color: #280039;
+    border: 2px solid #d4a9ff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(212, 169, 255, 0.3);
+    text-align: center;
+}
+
+.contact-box h2 {
+    color: rgb(212, 169, 255);
+    font-family: 'Aladin', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: rgb(236, 218, 255);
+    margin-bottom: 10px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: rgb(236, 218, 255);
+    color: #280039;
+    font-family: 'Times New Roman', serif;
+    font-size: 1em;
+}
+
+.contact-box textarea {
+    resize: vertical;
+}
+
+.contact-box button {
+    background-color: rgb(212, 169, 255);
+    color: #280039;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-box input::placeholder,
+.contact-box textarea::placeholder {
+    color: #280039;
+}
+
+.contact-box button:hover {
+    background-color: rgb(236, 218, 255);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* calendar */
+
+body.calendar {
+    background-color: rgb(236, 218, 255);
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-background {
+    background-color: #280039;
+    padding: 30px 0;
+    min-height: 100vh;
+}
+
+.calendar-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgb(227, 207, 255);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(130, 80, 180, 0.3);
+    color: #280039;
+}
+
+.calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .calendar-header h2 {
+}
+
+.calendar-header h2 {
     margin: 0;
     font-weight: 700;
     font-size: 1.8rem;
     color: #280039;
-  }
-  
-  /* Days of the week */
-  .day-name {
+}
+
+.calendar-header button {
+    background-color: #7e22a2;
+    color: #f4e4ff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
     font-weight: 600;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day-name {
+    font-weight: bold;
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid #a68eff;
     color: #280039;
-  }
-  
-  /* Date cells */
-  .date-cell {
-    background: #d6bfff; /* lighter purple */
+    border-bottom: 1px solid #a68eff;
+}
+
+.date-cell {
+    background-color: #d6bfff;
     border-radius: 8px;
     min-height: 80px;
     padding: 8px;
-    position: relative;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
+    position: relative;
     color: #280039;
-  }
-  
-  .date-cell.inactive {
+}
+
+.date-cell.inactive {
     opacity: 0.4;
-    cursor: default;
-  }
-  
-  .date-number {
-    font-weight: 600;
+}
+
+.date-number {
+    font-weight: bold;
     margin-bottom: 6px;
-  }
-  
-  /* Event tags */
-  .event-tag {
-    background-color: #7e22a2; /* deep purple */
+}
+
+.events {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-height: 60px;
+    overflow-y: auto;
+}
+
+.event-tag {
+    background-color: #7e22a2;
+    color: #f4e4ff;
+    font-size: 0.75rem;
     border-radius: 4px;
     padding: 2px 6px;
-    font-size: 0.75rem;
-    color: #f4e4ff; /* light */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     border: 1px solid #280039;
-    user-select: none;
+}
+
+.event-tag {
+    position: relative;
+    padding-right: 20px;
+}
+
+.delete-event {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    background: none;
+    border: none;
+    color: #f4e4ff;
+    font-size: 0.8rem;
     cursor: pointer;
-  }
-  
-  button.cancel-btn {
-    background-color: #a68eff;
-  }
-  
-  button.delete-btn {
-    background-color: #d9534f;
-  }
+    padding: 0;
+    line-height: 1;
+}
+
+
+.event-entry {
+    max-width: 850px;
+    margin: auto;
+    background-color: rgb(227, 207, 255);
+    color: #280039;
+    text-align: center;
+}
+
+.event-entry h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: #280039;
+    margin-bottom: 10px;
+}
+
+.event-entry input[type="text"],
+.event-entry input[type="date"],
+.event-entry input[type="color"] {
+    margin: 8px 6px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #280039;
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+}
+
+#addEventBtn {
+    font-family: 'Times New Roman', serif;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
