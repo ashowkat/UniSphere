@@ -16,8 +16,7 @@ section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    background-color: rgb(227, 207, 255);
-
+    background-color: rgb(212, 169, 255);
 }
 
 header {
@@ -206,7 +205,7 @@ main.todo-list {
 /* contact us box */
 .contact-box {
     background-color: #280039;
-    border: 2px solid #d4a9ff;
+    border: 2px solid rgb(212, 169, 255);
     border-radius: 20px;
     padding: 30px;
     max-width: 600px;
@@ -394,7 +393,7 @@ body.calendar {
 .event-entry {
     max-width: 850px;
     margin: auto;
-    background-color: rgb(227, 207, 255);
+    background-color: rgb(212, 169, 255);
     color: #280039;
     text-align: center;
 }
@@ -415,6 +414,10 @@ body.calendar {
     border: 1px solid #280039;
     font-family: 'Times New Roman', serif;
     font-size: 1rem;
+}
+
+#eventTitle::placeholder {
+    color: #280039;
 }
 
 #addEventBtn {
