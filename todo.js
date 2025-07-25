@@ -1,3 +1,6 @@
+//@author Amy Siby
+//@author Aleezah Showkat
+//javascript file for to-do page
 const button = document.getElementById("addTaskBtn");
 const input = document.getElementById("task"); //type string
 const list = document.getElementById("list");
