@@ -206,10 +206,10 @@ main.todo-list {
 .contact-box {
     background-color: #280039;
     border: 2px solid rgb(212, 169, 255);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 5px;
+    padding: 5px;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 20px auto;
     box-shadow: 0 4px 12px rgba(212, 169, 255, 0.3);
     text-align: center;
 }
@@ -217,21 +217,20 @@ main.todo-list {
 .contact-box h2 {
     color: rgb(212, 169, 255);
     font-family: 'Aladin', serif;
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-bottom: 0px;
 }
 
 .contact-box p {
     color: rgb(236, 218, 255);
-    margin-bottom: 10px;
 }
 
 .contact-box input,
 .contact-box textarea {
     width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
     background-color: rgb(236, 218, 255);
     color: #280039;
     font-family: 'Times New Roman', serif;
@@ -246,7 +245,7 @@ main.todo-list {
     background-color: rgb(212, 169, 255);
     color: #280039;
     border: none;
-    padding: 10px 25px;
+    padding: 5px 15px;
     border-radius: 10px;
     font-weight: bold;
     font-size: 1em;
